@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-cream-50 text-ink-900 font-sans antialiased;
+  overflow-x: hidden;
+}
+
+img, table {
+  max-width: 100%;
+}
+
+::selection {
+  @apply bg-primary-700 text-white;
+}
+
+::-webkit-scrollbar { @apply w-2.5; }
+::-webkit-scrollbar-track { @apply bg-cream-100; }
+::-webkit-scrollbar-thumb { @apply bg-primary-700/60 rounded-full; }
+::-webkit-scrollbar-thumb:hover { @apply bg-primary-700; }
+
+.font-display {
+  font-family: 'Fraunces', Georgia, serif;
+  letter-spacing: -0.02em;
+}
+
+.eyebrow {
+  @apply inline-flex items-center gap-2 text-[11px] font-semibold tracking-[0.22em] uppercase text-primary-700;
+}
+.eyebrow::before {
+  content: '';
+  @apply block w-8 h-px bg-gold-500;
+}
+
+.card-elegant {
+  @apply bg-white border border-ink-900/10 rounded-2xl shadow-card;
+}
+
+.btn-elegant {
+  @apply inline-flex items-center justify-center gap-2 font-medium rounded-full transition-all duration-300;
+}
+
+.divider-gold {
+  @apply h-px bg-gradient-to-r from-transparent via-gold-500/60 to-transparent;
+}
+
+.texture-grain {
+  background-image: radial-gradient(rgba(28,25,23,0.06) 1px, transparent 1px);
+  background-size: 22px 22px;
+}
